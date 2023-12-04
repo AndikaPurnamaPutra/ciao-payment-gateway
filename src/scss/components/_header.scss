@@ -1,0 +1,63 @@
+.section-header {
+  background-color: #A7BCBD;
+  padding-block: 50px;
+
+  .container {
+    &-header {
+      background-image: url(../../../assets/image/ciao-header-text-image.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      justify-content: center;
+
+      .content {
+        @include flex(row, center, center);
+        width: 100%;
+
+        .wrap {
+          position: relative;
+
+          .img-card {
+            max-width: 583px;
+
+            @include responsive(xl) {
+              max-width: 452px;
+            }
+
+            @include responsive(md) {
+              max-width: 344px;
+            }
+
+            @include responsive(sm) {
+              max-width: 216px;
+            }
+          }
+
+          .img-decoration-circle {
+            max-width: 132px;
+            position: absolute;
+            bottom: 119px;
+            left: -25px;
+
+            @include responsive(xl) {
+              max-width: 108px;
+              bottom: 98px;
+            }
+
+            @include responsive(md) {
+              max-width: 89px;
+              bottom: 74px;
+            }
+
+            @include responsive(sm) {
+              max-width: 52px;
+              bottom: 39px;
+              left: -15px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

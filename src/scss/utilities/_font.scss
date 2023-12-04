@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../../../assets/fonts/EudoxusSans-Bold.woff2") format("woff2"),
+    url("../../../assets/fonts/EudoxusSans-Bold.woff") format("woff"),
+    url("../../../assets/fonts/EudoxusSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../../../assets/fonts/EudoxusSans-Medium.woff2") format("woff2"),
+    url("../../../assets/fonts/EudoxusSans-Medium.woff") format("woff"),
+    url("../../../assets/fonts/EudoxusSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../../../assets/fonts/EudoxusSans-Regular.woff2") format("woff2"),
+    url("../../../assets/fonts/EudoxusSans-Regular.woff") format("woff"),
+    url("../../../assets/fonts/EudoxusSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../../../assets/fonts/GeneralSans-Regular.woff2') format('woff2'),
+    url('../../../assets/fonts/GeneralSans-Regular.woff') format('woff'),
+    url('../../../assets/fonts/GeneralSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../../../assets/fonts/GeneralSans-Medium.woff2') format('woff2'),
+    url('../../../assets/fonts/GeneralSans-Medium.woff') format('woff'),
+    url('../../../assets/fonts/GeneralSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../../../assets/fonts/GeneralSans-Semibold.woff2') format('woff2'),
+    url('../../../assets/fonts/GeneralSans-Semibold.woff') format('woff'),
+    url('../../../assets/fonts/GeneralSans-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+// Font Family
+$font-display: 'GeneralSans';
+$font-desc: "GeneralSans";
+$font-desc-secondary: "Eudoxus Sans";
+
+body {
+  font-family: $font-display;
+}
+
+h1 {
+  color: #272727;
+  font-family: $font-display;
+  font-size: 152px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  /* 167.2px */
+  letter-spacing: -3.04px;
+
+  @include responsive(xl) {
+    font-size: 102px;
+  }
+
+  @include responsive(md) {
+    font-size: 92px;
+  }
+  @include responsive(sm) {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  color: $black;
+  font-family: $font-display;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 124%;
+  /* 79.36px */
+  letter-spacing: -1.28px;
+  @include responsive(xl) {
+    font-size: 52px;
+  }
+
+  @include responsive(sm) {
+    font-size: 32px;
+  }
+}
+
+h4 {
+  color: #2E302F;
+  font-family: $font-display;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  /* 35.2px */
+  letter-spacing: -0.64px;
+
+  @include responsive(xl) {
+    font-size: 26px;
+  }
+
+  @include responsive(md){
+    font-size: 24px;
+  }
+  @include responsive(md){
+    font-size: 20px;
+  }
+}
+
+h5 {
+  color: $black;
+  font-family: $font-display;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 33.6px */
+  letter-spacing: -0.48px;
+}
+
+p {
+  color: $subtext-secondary;
+  font-family: $font-desc;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: 0.08px;
+}
+
+a {
+  color: #272727;
+  font-family: $font-desc;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+// $fontFamilyInter: "Inter", sans-serif;
+// $fontFamilyGilroy: "Gilroy", sans-serif;
+// $fontFamilies: (
+//     font-sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+//     font-serif: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+//     font-mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+//     font-inter: '"Inter", sans-serif',
+//     font-gilroy: '"Gilroy", sans-serif'
+// ) !default;

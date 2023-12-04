@@ -1,0 +1,78 @@
+.section-feature {
+  padding-block: 100px;
+
+  @include responsive(md) {
+    padding-block: 50px;
+  }
+
+  .container {
+    &-feature {
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+
+      @include responsive(md) {
+        gap: 16px;
+      }
+
+      .content {
+        &-item {
+          @include flex(row, center, center);
+
+          @include responsive(md) {
+            position: relative;
+          }
+
+          &:hover {
+            .content-item-text {
+              opacity: 1;
+            }
+
+            img {
+              visibility: visible;
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+
+          &-text {
+            color: #1E211C;
+            line-height: 110%;
+            /* 70.4px */
+            letter-spacing: -1.28px;
+            opacity: 0.4;
+            transition: all 300ms ease;
+            cursor: pointer;
+            text-align: center;
+
+            span {
+              @include responsive(md) {
+                display: none;
+              }
+            }
+          }
+
+          img {
+            max-width: 164px;
+            position: absolute;
+            top: -40px;
+            right: 162px;
+            visibility: hidden;
+            transform: scale(0.2);
+            transition: all 500ms ease;
+            opacity: 0;
+
+            @include responsive(xl) {
+              max-width: 132px;
+              right: 80px;
+            }
+
+            @include responsive(md) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.section-theCard {
+  padding-block: 100px;
+
+  @include responsive(md) {
+    padding-block: 50px;
+  }
+
+  .container {
+    &-theCard {
+      flex-direction: column;
+      gap: 80px;
+
+      @include responsive(md) {
+        gap: 40px;
+      }
+
+      .content {
+        &-top {
+          @include flex(row, flex-end, space-between);
+          max-width: 1070px;
+          gap: 80px;
+          margin-inline: auto;
+
+          @include responsive(md) {
+            @include flex(column, flex-start, space-between);
+            gap: 32px;
+          }
+
+          @include responsive(sm) {
+            gap: 16px;
+          }
+
+          .subtext {
+            &-text {
+              &-display {
+                max-width: 800px;
+
+                @include responsive(xl) {
+                  max-width: 582px;
+                }
+              }
+
+              &-desc {
+                font-family: $font-desc-secondary;
+                max-width: 190px;
+
+                @include responsive(xl) {
+                  max-width: 164px;
+                }
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          @include flex(row, flex-start, space-between);
+          gap: 30px;
+
+          @include responsive(md) {
+            flex-direction: column;
+          }
+
+          .card {
+            padding-inline: 92px;
+            background-color: #ABBFC0;
+            border-radius: 8px;
+            overflow: hidden;
+            @include flex(column, null, space-between);
+            gap: 51px;
+
+            @include responsive(sm) {
+              padding-inline: 46px;
+              gap: 25px;
+            }
+
+            &:nth-child(1) {
+              padding-top: 180px;
+
+              @include responsive(sm) {
+                padding-top: 90px;
+              }
+
+              .card-image {
+                margin-bottom: -296px;
+
+                @include responsive(xl) {
+                  margin-bottom: -184px;
+                }
+
+                @include responsive(md) {
+                  margin-bottom: -359px;
+                }
+
+                @include responsive(sm) {
+                  margin-bottom: -159px;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              padding-bottom: 189px;
+              margin-top: 50px;
+
+              @include responsive(md) {
+                margin-top: 0;
+              }
+
+              @include responsive(sm) {
+                padding-bottom: calc(189px / 2);
+              }
+
+              .card-image {
+                margin-top: -280px;
+
+                @include responsive(xl) {
+                  margin-top: -175px;
+                }
+
+                @include responsive(md) {
+                  margin-top: -346px;
+                }
+
+                @include responsive(sm) {
+                  margin-top: -154px;
+                }
+              }
+            }
+
+            &-text {
+              @include flex(row, center, space-between);
+            }
+
+            &-image {
+              max-width: 711px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

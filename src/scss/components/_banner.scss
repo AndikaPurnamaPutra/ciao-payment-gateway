@@ -1,0 +1,74 @@
+.section-banner {
+  .container {
+    &-banner {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../../../assets/image/ciao-banner-bg-image.png), lightgray 0px -1px / 100% 100.267% no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 110px;
+
+      @include responsive(xl) {
+        padding: 55px;
+      }
+
+      @include responsive(sm) {
+        padding: 25px;
+      }
+
+      .subtext {
+        @include flex(row, flex-end, space-between);
+        width: 100%;
+
+        @include responsive(md) {
+          @include flex(column, null, space-between);
+          gap: 40px;
+        }
+
+        @include responsive(sm) {
+          gap: 32px;
+        }
+
+        &-text {
+          @include responsive(md) {
+            width: 100%;
+          }
+
+          &-display {
+            margin-top: 284px;
+            max-width: 770px;
+            color: $white;
+            margin-bottom: 16px;
+
+            @include responsive(xl) {
+              max-width: 586px;
+            }
+
+            @include responsive(md) {
+              max-width: 100%;
+              margin-top: 142px;
+            }
+
+            @include responsive(sm) {
+              margin-top: 0;
+            }
+          }
+
+          &-desc {
+            max-width: 520px;
+            color: #D1D0DB;
+
+            @include responsive(md) {
+              max-width: 100%;
+            }
+          }
+
+          .btn-primary {
+            @include responsive(md) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

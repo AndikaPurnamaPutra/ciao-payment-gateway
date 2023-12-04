@@ -1,0 +1,82 @@
+.section-tagline {
+  padding-block: 100px;
+
+  @include responsive(md) {
+    padding-block: 50px;
+  }
+  .container {
+    &-tagline {
+      flex-direction: column;
+      gap: 30px;
+
+      @include responsive(sm) {
+        gap: 0;
+      }
+
+      .subtext {
+        &-text {
+          @include flex(row, center, space-between);
+
+          @include responsive(md) {
+            @include flex(column, flex-start, space-between);
+            gap: 16px;
+          }
+
+          &-desc {
+            max-width: 190px;
+            font-family: $font-desc-secondary;
+          }
+
+          .subscribe {
+            @include flex(column, null, space-between);
+            gap: 32px;
+            width: 410px;
+            @include responsive(xl) {
+              width: 374px;
+            }
+            @include responsive(md) {
+              width: 100%;
+            }
+            form {
+              @include flex(row, center, space-between);
+              position: relative;
+
+              input[type=text] {
+                width: 100%;
+                border: none;
+                background-color: transparent;
+                border-bottom: 1px solid #2E302F;
+                color: #2E302F;
+                font-family: $font-desc;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 125%;
+                /* 25px */
+                letter-spacing: -0.6px;
+                padding-bottom: 8px;
+                &:focus {
+                  outline: unset;
+                }
+              }
+
+              input[type=submit] {
+                background-image: url(../../../assets/image/ciao-tagline-arrowbtn.svg);
+                border: none;
+                width: 32px;
+                height: 32px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
